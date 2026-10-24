@@ -34,4 +34,3 @@ See [Privacy policy](https://azmolfk.github.io/Google-Desk-for-Corsair-Xenon-Edg
 Package a modified widget using the official iCUE CLI: `icuewidget package app/widget -o app/Google-Desk.icuewidget`. Rebuild the Windows launcher from `app/desktop/Launcher.cs` using the .NET Framework C# compiler with Windows Forms, Drawing, Security and Web.Extensions references.
 
 This is an independent personal project, not affiliated with Google, CORSAIR or Elgato.
-

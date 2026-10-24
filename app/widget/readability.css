@@ -1,0 +1,99 @@
+/* Physical-panel defaults. Increase useful content, reduce decorative text. */
+:root { --text-scale: 1.5; }
+.eyebrow,.kicker,.tiny-label,.bottom-bar,.panel-footer { display:none; }
+.topbar { min-height:54px; }
+.brand strong { font-size:calc(19px * var(--text-scale)); }
+.brand-mark { font-size:38px; }
+.account-chip { font-size:calc(13px * var(--text-scale)); padding:8px 14px; }
+.clock { font-size:calc(18px * var(--text-scale)); }
+.connection { font-size:calc(13px * var(--text-scale)); }
+.shell { gap:12px; padding:12px; }
+.day-strip { min-height:86px; padding:10px 24px; }
+.date-block strong { font-size:calc(15px * var(--text-scale)); }
+.date-block div>span { font-size:calc(12px * var(--text-scale)); }
+.day-number { font-size:52px; }
+.meeting-label { font-size:calc(10px * var(--text-scale)); letter-spacing:.06em; }
+.meeting-copy strong { font-size:calc(21px * var(--text-scale)); }
+.meeting-copy small { font-size:calc(13px * var(--text-scale)); }
+.meeting-time { font-size:calc(25px * var(--text-scale)); }
+.primary-button { font-size:calc(15px * var(--text-scale)); padding:12px 20px; }
+.panel-heading { padding:16px 22px 12px; }
+h1 { font-size:calc(23px * var(--text-scale)); margin:0; }
+.count { font-size:calc(13px * var(--text-scale)); }
+.view-switch { margin:0 22px; }
+.view-switch button { font-size:calc(14px * var(--text-scale)); padding:9px 5px; }
+.calendar-navigation { font-size:calc(15px * var(--text-scale)); padding:10px 22px; }
+.calendar-navigation button { font-size:34px; min-width:42px; }
+.schedule-day { padding:6px 22px 12px; }
+.schedule-label { font-size:calc(11px * var(--text-scale)); margin-bottom:8px; }
+.event { gap:14px; padding:7px 0; }
+.event-time { font-size:calc(13px * var(--text-scale)); width:calc(65px * var(--text-scale)); }
+.event-card { padding:12px 16px; }
+.event-card strong { font-size:calc(18px * var(--text-scale)); line-height:1.35; }
+.event-card small { font-size:calc(12px * var(--text-scale)); line-height:1.45; }
+.inbox-toolbar { padding:0 22px 12px;flex-shrink:0; }
+.inbox-filter-control { width:min(100%,300px);min-width:0; }
+.inbox-filter-trigger { width:100%;min-height:46px;padding:9px 16px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);font-size:calc(14px * var(--text-scale));display:flex;align-items:center;justify-content:space-between;gap:18px;text-align:left; }
+.filter-chevron { display:inline-block;transition:transform .18s ease; }
+.inbox-filter-trigger[aria-expanded=true] { border-color:var(--accent); }
+.inbox-filter-trigger[aria-expanded=true] .filter-chevron { transform:rotate(180deg); }
+.inbox-filter-menu { display:grid;grid-template-rows:0fr;opacity:0;visibility:hidden;transition:grid-template-rows .18s ease,opacity .16s ease,visibility .18s; }
+.inbox-filter-menu.open { grid-template-rows:1fr;opacity:1;visibility:visible; }
+.inbox-filter-clip { min-height:0;overflow:hidden; }
+.inbox-filters { display:flex;flex-direction:column;gap:4px;max-height:min(178px,26dvh);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-top:6px; }
+.inbox-filters button { flex-shrink:0;width:100%;min-height:46px;padding:9px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);color:var(--text);font-size:calc(13px * var(--text-scale));white-space:nowrap;display:flex;align-items:center;justify-content:space-between;text-align:left; }
+.inbox-filters button[aria-pressed=true] { background:var(--accent);color:#10251a;border-color:var(--accent);font-weight:600; }
+.inbox-filters button[aria-pressed=true]::after { content:'✓';margin-left:12px; }
+@media(prefers-reduced-motion:reduce){.inbox-filter-menu,.filter-chevron{transition:none}}
+@media(max-height:450px){.inbox-panel.filter-open .panel-heading{display:none}}
+select { font-size:calc(14px * var(--text-scale)); padding:9px 12px; }
+.chip { font-size:calc(13px * var(--text-scale)); padding:9px 14px; }
+.email { padding:18px 22px; gap:14px; }
+.avatar { width:44px; height:44px; font-size:calc(13px * var(--text-scale)); }
+.email-sender { font-size:calc(18px * var(--text-scale)); }
+.email-subject { font-size:calc(16px * var(--text-scale)); line-height:1.5; white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.email-time { font-size:calc(11px * var(--text-scale)); }
+.email-markers { font-size:calc(13px * var(--text-scale)); }
+.mail-label { font-size:calc(11px * var(--text-scale)); }
+.reader-subject { font-size:calc(26px * var(--text-scale)); }
+.reader-meta { font-size:calc(13px * var(--text-scale)); }
+.message-body { font-size:calc(19px * var(--text-scale)); line-height:1.65; }
+.notes-toolbar { padding:0 22px 14px; }
+.source-switch button { font-size:calc(15px * var(--text-scale)); }
+.note-card { padding:18px; }
+.note-card strong { font-size:calc(19px * var(--text-scale)); }
+.note-card p { font-size:calc(16px * var(--text-scale)); line-height:1.55; }
+.note-meta { font-size:calc(10px * var(--text-scale)); }
+.quiet-button { font-size:calc(13px * var(--text-scale)); }
+.empty-state { font-size:calc(16px * var(--text-scale)); }
+.empty-state strong { font-size:calc(21px * var(--text-scale)); }
+.month-weekday { font-size:calc(12px * var(--text-scale)); }
+.month-day { font-size:calc(16px * var(--text-scale)); min-height:56px; }
+.panel-nav button { font-size:calc(14px * var(--text-scale)); padding:9px 20px; }
+.demo-banner { font-size:13px; }
+.settings-dialog .quiet-button,.settings-dialog .primary-button { font-size:15px; }
+.settings-dialog .kicker,.note-dialog .kicker { display:block; }
+.settings-dialog select { font-size:16px; }
+.note-dialog .quiet-button { font-size:15px; }
+@media(max-width:899px){
+ .topbar{min-height:40px}.brand strong{font-size:calc(14px * var(--text-scale))}.brand-mark{font-size:28px}
+ .accounts{max-width:43%}.account-chip{font-size:calc(10px * var(--text-scale));padding:6px 10px}
+ .date-block div>span{display:none}.day-number{font-size:34px}.date-block strong{font-size:calc(12px * var(--text-scale))}
+ .day-strip{min-height:68px;padding:8px 14px;gap:12px}.meeting-time{font-size:calc(18px * var(--text-scale))}
+ .meeting-copy strong{font-size:calc(16px * var(--text-scale))}.meeting-label{font-size:calc(8px * var(--text-scale))}
+ .meeting-copy small{display:none}.meeting .primary-button{font-size:calc(11px * var(--text-scale));padding:10px 12px}
+ .meeting .quiet-button{display:none}.strip-divider{height:32px}
+ .panel-heading{padding:10px 18px}h1{font-size:calc(21px * var(--text-scale))}
+ .panel-nav{gap:6px}.panel-nav button{padding:7px 14px;font-size:calc(12px * var(--text-scale))}
+ .email-sender{font-size:calc(17px * var(--text-scale))}.email-subject{font-size:calc(15px * var(--text-scale))}
+}
+@media(max-height:450px){
+ .shell{padding:8px;gap:6px}.topbar{min-height:32px}.brand strong{font-size:18px}.brand-mark{font-size:25px}
+ .day-strip{min-height:56px;padding:6px 14px}.day-number{font-size:30px}.meeting-copy strong{font-size:calc(14px * var(--text-scale))}
+ .meeting-time{font-size:calc(16px * var(--text-scale))}.meeting-label{font-size:10px}.date-block strong{font-size:15px}
+ .panel-nav button{font-size:calc(11px * var(--text-scale));padding:5px 16px}
+ .panel-heading{padding:8px 16px}h1{font-size:calc(17px * var(--text-scale))}
+ .view-switch button{font-size:calc(12px * var(--text-scale));padding:6px}.calendar-navigation{font-size:calc(12px * var(--text-scale));padding:3px 16px}
+ .schedule-label{display:none}.event-card strong{font-size:calc(15px * var(--text-scale))}.event-card small{font-size:calc(11px * var(--text-scale))}
+ .event-time{font-size:calc(12px * var(--text-scale));width:calc(56px * var(--text-scale))}.event-card{padding:9px 12px}
+}

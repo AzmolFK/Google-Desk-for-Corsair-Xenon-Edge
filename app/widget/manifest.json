@@ -1,0 +1,15 @@
+{
+  "author": "Personal Widgets",
+  "id": "local.googledesk.dashboard",
+  "name": "Google Desk",
+  "description": "Personal Gmail, Calendar, meeting reminders and notes with a local Windows companion.",
+  "version": "0.3.2",
+  "preview_icon": "resources/icon.svg",
+  "min_app_version": "5.52",
+  "min_framework_version": "1.9.0",
+  "os": [{"platform": "windows"}],
+  "supported_devices": [{"type": "dashboard_lcd"}],
+  "interactive": true,
+  "required_plugins": ["widgetbuilder.linkprovider:Url:1.0"],
+  "permissions": [{"type": "url", "domain": "127.0.0.1", "port": 8765}]
+}
